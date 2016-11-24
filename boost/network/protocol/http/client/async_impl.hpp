@@ -66,7 +66,7 @@ struct async_client
       lifetime_thread_.reset(new std::thread([this]() { service_.run(); }));
   }
 
-  ~async_client() throw() = default;
+  ~async_client() = default;
 
   void wait_complete() {
     sentinel_.reset();
